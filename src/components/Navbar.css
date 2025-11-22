@@ -17,7 +17,7 @@
 .nav-search {
   display: flex;
   align-items: center;
-  max-width: 2300px; /* 搜索区域最大宽度 */
+  max-width: 1000px; /* 搜索区域最大宽度 */
   width: 100%;
 }
 
