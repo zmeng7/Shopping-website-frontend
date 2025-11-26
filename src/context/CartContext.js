@@ -26,10 +26,25 @@ export function CartProvider({ children }) {
     });
   };
 
+   // ⭐ 计算购物车总价
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.qty,
+    0
+  );
+
+  // ⭐ 计算购物车总数量（Navbar 上要显示的）
+  const totalItems = cartItems.reduce(
+    (sum, item) => sum + item.qty,
+    0
+  );
+
+
   // 暂时不实现 remove（之后再做）
   const value = {
     cartItems,
     addToCart,
+    totalPrice, 
+    totalItems,
   };
 
   return (

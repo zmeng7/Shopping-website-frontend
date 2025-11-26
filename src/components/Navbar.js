@@ -1,6 +1,12 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+
 
 function Navbar() {
+  const { cartItems } = useCart();
+  const { totalItems } = useCart();
+  const {totalPrice} = useCart();
   return (
     <div className="navbar">
       <div className="nav-logo">TAOBAO</div>
@@ -11,9 +17,13 @@ function Navbar() {
       </div>
 
       <div className="nav-links">
-        <span>分类</span>
-        <span>购物车</span>
-        <span>登录</span>
+        
+        
+        <Link to="/cart">
+          购物车({totalItems})
+        </Link>
+
+        
       </div>
     </div>
   );

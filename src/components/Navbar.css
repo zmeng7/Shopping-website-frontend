@@ -37,8 +37,12 @@
   cursor: pointer;
 }
 
-.nav-links {
+.nav-links a{
   display: flex;
   gap: 40px;
   font-size: 16px;
+  color: inherit;           /* 继承 .navbar 的白色字体 */
+  text-decoration: none;    /* 去掉下划线 */
+  font-size: 16px;          /* 与 span 保持一致 */
+  cursor: pointer;
 }
